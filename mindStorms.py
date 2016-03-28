@@ -38,9 +38,17 @@ def getDefaultDrawer():
 
     return drawer
 
+def drawCircle(angulation):
+    drawer = getDefaultDrawer()
+
+    drawer.right(angulation)
+
+    drawer.circle(100)
+
 screen = addScreen()
 
-for i in range(0, 72):
-    drawSquare(i * 5);
+for i in range(0, 20):
+    drawCircle(i * 18)
+    
 
 screen.exitonclick()
